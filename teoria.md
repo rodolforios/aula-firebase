@@ -1,7 +1,6 @@
-# Firebase #
-
-## Informações Gerais ##
-
+# Firebase. #
+## Informações Gerais. ##
+---
 
 
 * Infraestrutura Web e Mobile disponibilizada pela Google
@@ -96,3 +95,22 @@ NOVO: o Cloud Firestore permite armazenar, sincronizar e consultar dados de apps
 * **Firebase Dynamic Links.** - Dynamic Links are smart URLs that allow you to send existing and potential users to any location within your iOS or Android app. They survive the app install process, so even new users see the content they're looking for when they open the app for the first time. Dynamic Links are no-cost forever, for any scale.
 * **In-App Messaging.** - O Firebase In-App Messaging ajuda você a envolver os usuários ativos do seu aplicativo por meio do envio de mensagens direcionadas e contextuais. Essas mensagens incentivam os usuários a concluir ações importantes, como passar de fase em um jogo, comprar um item ou inscrever-se em um conteúdo.
 
+---
+## Visão geral sobre as soluções de autenticação do Firebase ##
+---
+
+O Firebase Authentication é um recurso poderoso que irá nos ajudar a autenticar os nossos usuários de forma simples e segura aproveitando os recursos do SDK oferecido pelo Google Firebase.
+
+Vamos implementar a autenticação por e-mail e senha, verificação de e-mails e redefinição de senhas de nossos usuários.
+
+Também vamos fazer a autenticação através de outros provedores como o Google, GitHub e Facebook.
+
+### Iniciando o Projeto
+---
+1 - Após logado no firebase, vá no console e clique em criar um novo projeto
+
+2 - Depois procure as configurações e selecione web.(é necessário uma configuração diferente para cada ambiente como mibile ou web)
+
+3 - Existem duas formas de aplicar os dados do projeto com com o visual Studio, usando npm ou copiando as tags scripts.
+
+4 - 
