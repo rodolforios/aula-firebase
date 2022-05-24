@@ -11,13 +11,22 @@ var userContent = document.getElementById('userContent')
 
 var userEmail = document.getElementById('userEmail')
 
+var sendEmailVerificationDiv = document.getElementById('sendEmailVerificationDiv')
+var emailVerified = document.getElementById('emailVerified')
+
+var passwordReset = document.getElementById('passwordReset')
+
+var userName = document.getElementById('userName')
+var userImg = document.getElementById('userImg')
+
 
 // Alterar o formulário de autenticação para o cadastro de novas contas
 function toggleToRegister() {
   authForm.submitAuthForm.innerHTML = 'Cadastrar conta'
   authFormTitle.innerHTML = 'Insira seus dados para se cadastrar'
-  hideItem(register)
-  showItem(access)
+  hideItem(register) // Esconder atalho para cadastrar conta
+  hideItem(passwordReset) // Esconder a opção de redefinição de senha
+  showItem(access) // Mostrar atalho para acessar conta
 }
 
 // Alterar o formulário de autenticação para o acesso de contas já existentes
@@ -43,7 +52,7 @@ function hideItem(element) {
 function showUserContent(user) {
   console.log(user)
   if (user.providerData[0].providerId != 'password') {
-    emailVerified.innerHTML = 'Auatenticação por provedor confiável, não é necessário verificar e-mail'
+    emailVerified.innerHTML = 'Autenticação por provedor confiável, não é necessário verificar e-mail'
     hideItem(sendEmailVerificationDiv)
   } else {
     if (user.emailVerified) {
@@ -55,13 +64,6 @@ function showUserContent(user) {
     }
   }
   
-  userImg.src = user.photoURL ? user.photoURL : 'img/unknownUser.png'
-  userName.innerHTML = user.displayName
-  userEmail.innerHTML = user.email
-  hideItem(auth)
-  showItem(userContent)
-}
-
   userImg.src = user.photoURL ? user.photoURL : 'img/unknownUser.png'
   userName.innerHTML = user.displayName
   userEmail.innerHTML = user.email
