@@ -24,8 +24,9 @@ function toggleToRegister() {
 function toggleToAccess() {
   authForm.submitAuthForm.innerHTML = 'Acessar'
   authFormTitle.innerHTML = 'Acesse a sua conta para continuar'
-  hideItem(access)
-  showItem(register)
+  hideItem(access) // Esconder atalho para acessar conta
+  showItem(passwordReset) // Mostrar a opção de redefinição de senha
+  showItem(register) // Mostrar atalho para cadastrar conta
 }
 
 // Simplifica a exibição de elementos da página
@@ -42,7 +43,7 @@ function hideItem(element) {
 function showUserContent(user) {
   console.log(user)
   if (user.providerData[0].providerId != 'password') {
-    emailVerified.innerHTML = 'Autenticação por provedor confiável, não é necessário verificar e-mail'
+    emailVerified.innerHTML = 'Auatenticação por provedor confiável, não é necessário verificar e-mail'
     hideItem(sendEmailVerificationDiv)
   } else {
     if (user.emailVerified) {
@@ -53,6 +54,13 @@ function showUserContent(user) {
       showItem(sendEmailVerificationDiv)
     }
   }
+  
+  userImg.src = user.photoURL ? user.photoURL : 'img/unknownUser.png'
+  userName.innerHTML = user.displayName
+  userEmail.innerHTML = user.email
+  hideItem(auth)
+  showItem(userContent)
+}
 
   userImg.src = user.photoURL ? user.photoURL : 'img/unknownUser.png'
   userName.innerHTML = user.displayName
@@ -67,4 +75,9 @@ function showAuth() {
   authForm.password.value = ''
   hideItem(userContent)
   showItem(auth)
+}
+
+// Atributos extras de configuração de e-mail
+var actionCodeSettings = {
+  url: 'http://127.0.0.1:5500/'
 }

@@ -114,3 +114,7 @@ Também vamos fazer a autenticação através de outros provedores como o Google
 3 - Existem duas formas de aplicar os dados do projeto com com o visual Studio, usando npm ou copiando as tags scripts.
 
 4 - 
+ ---
+### Personalizando os templates de verificação de email,redefinição entre outros.
+
+* Clique em authentication e em seguida Templates.

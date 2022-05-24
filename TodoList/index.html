@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>TodoList</title>
   <link rel="shortcut icon" href="img/todoListFavicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <div id="app">
     <!--Logotipo do TodoList-->
@@ -32,7 +34,11 @@
 
         <button type="submit" id="submitAuthForm">Acessar</button>
       </form>
-
+      <!--Possibilita a redefiniação de senha-->
+      <p id="passwordReset">
+        Esqueceu a senha?
+        <button class="alternative" onclick="sendPasswordResetEmail()">Redefinir minha senha</button>
+      </p>
       <!--Alternar o fomulário de autenticação para o cadastro de novas contas-->
       <p id="register">
         Não possui uma conta?
@@ -43,6 +49,12 @@
       <p id="access" class="startHidden">
         Já possui uma conta?
         <button onclick="toggleToAccess()" class="alternative">Acesse a sua conta</button>
+      </p>
+      <p>
+        Ou acesse usando:<br>
+         <!--Outros provedores de autenticação-->
+        <img src="img/google.png" alt="Logotipo do Google" onclick="signInWithGoogle()">
+        <img src="img/github.png" alt="Autenticação pelo GitHub" onclick="signInWithGitHub()">
       </p>
     </div>
 
@@ -57,9 +69,7 @@
         <div id="sendEmailVerificationDiv">
           <button class="alternative" onclick="sendEmailVerification()">Verificar e-mail</button>
         </div>
-        <button class="alternative" onclick="updateUserName()">Atualizar meu nome</button>
         <button class="alternative" onclick="signOut()">Sair</button>
-        <button class="danger" onclick="deleteUserAccount()">Excluir minha conta</button>
       </div>
     </div>
   </div>
@@ -68,10 +78,11 @@
   <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
 
-  
+
   <!--Nossa programação em JavaScript-->
   <script src="js/firebase.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/auth.js"></script>
 </body>
+
 </html>
