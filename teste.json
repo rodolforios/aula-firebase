@@ -1,0 +1,190 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "RedeAdapter",
+        "description": "Componente responsável pela conexão com o adquirente Rede.",
+        "version": "0.1.9"
+    },
+    "servers": [
+        {
+            "url": "http://api.example.com/v1",
+            "description": "Optional server description, e.g. Main (production) server"
+        },
+        {
+            "url": "http://staging-api.example.com",
+            "description": "Optional server description, e.g. Internal staging server for testing"
+        }
+    ],
+    "paths": {
+        "/admin/histogram": {
+            "get": {
+                "summary": "Returns a list of users.",
+                "description": "Optional extended description in CommonMark or HTML.",
+                "responses": {
+                    "200": {
+                        "description": "A JSON array of user names",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "orders/authenticate/:id": {
+            "get": {
+                "summary": "Returns a list of users.",
+                "description": "Optional extended description in CommonMark or HTML.",
+                "responses": {
+                    "200": {
+                        "description": "A JSON array of user names",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "orders/histogram": {
+            "get": {
+                "summary": "Returns a list of users.",
+                "description": "Optional extended description in CommonMark or HTML.",
+                "responses": {
+                    "200": {
+                        "description": "A JSON array of user names",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/orders": {
+            "post": {
+                "summary": "Returns a list of users.",
+                "description": "Optional extended description in CommonMark or HTML.",
+                "responses": {
+                    "200": {
+                        "description": "A JSON array of user names",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/orders/:id": {
+            "get": {
+                "summary": "Returns a list of users.",
+                "description": "Optional extended description in CommonMark or HTML.",
+                "responses": {
+                    "200": {
+                        "description": "A JSON array of user names",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "orders/:id/capture": {
+            "get": {
+                "summary": "Returns a list of users.",
+                "description": "Optional extended description in CommonMark or HTML.",
+                "responses": {
+                    "200": {
+                        "description": "A JSON array of user names",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "orders/:id": {
+            "get": {
+                "summary": "Returns a list of users.",
+                "description": "Optional extended description in CommonMark or HTML.",
+                "responses": {
+                    "200": {
+                        "description": "A JSON array of user names",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/orders/:id/:option": {
+            "get": {
+                "summary": "Returns a list of users.",
+                "description": "Optional extended description in CommonMark or HTML.",
+                "responses": {
+                    "200": {
+                        "description": "A JSON array of user names",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+    
+}
